@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> 随机数 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+    <script type="text/javascript">
+	   var a = Math.floor(Math.random()*10);
+	   function show(){
+		   var i = parseInt(prompt("请输入数字:"))
+		   while(i!=a){
+			
+				  if(i<a){
+					 alert("亲，不够");
+				  }else{
+					 alert("亲，太大了");
+				  }
+				  alert(a);
+				  i = parseInt(prompt("请重新输入数字:"));
+			 
+		   }
+		   alert("恭喜你,不大不小刚刚好!");
+
+	   }
+
+	</script>
+ </head>
+
+ <body>
+    <input type="button" value="猜一猜" onclick="show()">
+	</input>
+ </body>
+</html>

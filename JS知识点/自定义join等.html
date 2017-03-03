@@ -1,0 +1,159 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> 自定义Join等方法 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script type="text/javascript">
+  /*
+  arr = ["张三","李四","王五","赵六","老王"];
+  //alert("我们班的好学生有:"+arr.join(""));  
+
+  arr.toMystring = function(splitStr){
+      var _str = "";
+	  for(i=0;i<this.length;i++){
+	      _str = _str+this[i];    //this只属于arr自身，不能给子代
+          if(i!=this.length-1){
+		     _str = _str+splitStr;
+		  }
+	  }
+	  return _str;
+  }
+  alert("我们班的好学生有:"+arr.toMystring("，"));//先执行arr.toMystring("，") 把，传给splitStr
+  //alert其实弹出的是alert(_str)
+  */
+  /*
+  var arr = ["a","b","c"];
+  arr.myPush = function(item){
+	 this[this.length]=item;
+	 return this.length;
+  }
+  alert(arr.myPush("张三"));  //弹出数组长度4
+  arr.myPush("张三");
+  alert(arr);
+  
+  var arr = ["a","b","c"];
+  arr.myUnshift = function(item){
+      for(var i=this.length;i>=0;i--){
+		 this[i] = this[i-1];
+	  }
+	   this[0] = item;
+	   return this[i];
+  }
+  arr.myUnshift("张三");
+  alert(arr);
+  */
+  /* 
+  var arr = ['a','b','c','d','e','f','g'];
+  
+  arr.mySlice = function(start,length){
+      var arr2=[];
+	  for(var i=start;i<start+length;i++){
+	    arr2.push(arr[i]);
+     // this[this.length]=this[i];
+	  }
+	  return arr2;
+  }
+  var arr2=arr.mySlice(2,4); //从下标2开始，往后数4个元素
+  alert(arr2);
+  
+  arr.mySlice = function(start,end){
+      var arr2=[];
+	  for(var i=start;i<end;i++){
+	    arr2.push(arr[i]);
+	  }
+	  return arr2;
+  }
+  var arr2=arr.mySlice(2,4);  //从下标2开始，到下标4结束
+  alert(arr2);
+  
+
+   var arr = ['a','b','c','d','e','f','g'];
+   arr.myReverse = function(){       
+	   for(var i=0;i<(Math.floor(this.length/2));i++){
+		   var _temp = this[i];
+		   this[i] = this[this.length-1-i]; //第1个和最后一个比，第2个和倒数第二个比...
+		   this[this.length-1-i] = _temp;
+		}
+	    return arr;
+   }   
+   alert(arr.myReverse());   //倒序排列 
+   */
+
+   var arr =[0,1,2,3,4,5,6,7];
+   arr.myPop=function(){
+		var _arr=[];
+		for(var i=0;i<this.length-1;i++){
+			_arr[_arr.length]=this[i];
+		}
+		
+		return _arr;
+   }
+   //alert(arr.myPop());
+
+   arr.myShift=function(){
+		var _arr=[];
+		for(var i=1;i<this.length;i++){
+			_arr[_arr.length]=this[i];
+		}
+		return _arr;
+   }
+   //alert(arr.myShift());
+
+	arr.mySplice=function(index,item,replace){
+		var _arr=[];
+		var _temp;
+		for(var i=0;i<(this.length-item+1);i++){
+			 if(i<index){
+				_arr[_arr.length]=this[i];  //装删除元素的前面元素
+				_temp=i+item+1;//装删除元素的后面元素
+			 }else if(i<index+1){
+				for(var j=0;j<replace.length;j++){
+					_arr[_arr.length]=replace[j]; //装删除元素的前面元素+替换元素
+				}
+			 }else{
+				_arr[_arr.length]=this[_temp];//装删除元素的前面元素+替换元素+删除元素的后面元素
+				_temp++;
+			 }
+		}
+		return _arr;
+	}
+    //console.log('mySlice：'+arr.mySplice(2,3,[88,99,00]));
+	alert(arr.mySplice(2,3,[88,99,00]));
+	
+
+
+	var arr3=[1,2,3,4,5,6,7];
+	arr3.mySplice = function(frist,num,indexs){
+		var _arr = [ ];
+		var _temp;
+		for(var i=0; i<(this.length-num+1);i++){
+				if(i<frist){
+						_arr[_arr.length]=this[i];
+						_temp=i+num+1;
+				}else if(i<frist+1){
+						if(typeof(indexs)==='number'){
+								_arr[_arr.length]=indexs;
+						}else if(typeof(indexs)==='object'){
+								for(var j=0;j<indexs.length;j++){
+								_arr[_arr.length]=indexs[j];
+								}	
+						}	
+				}else{
+						_arr[_arr.length]=this[_temp];
+						_temp++;
+				}
+		}
+		return _arr;
+	}
+	console.log('mySplice：'+arr3.mySplice(2,3,1));
+
+  </script>
+ </head>
+
+ <body>
+  
+ </body>
+</html>

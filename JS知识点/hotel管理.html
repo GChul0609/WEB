@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> hotel management </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script type="text/javascript">
+	  var room = [
+		{name:101,type:'双人间',price:200,status:'未入住'},
+		{name:102,type:'单人间',price:80,status:'未入住'},
+		{name:103,type:'豪华双人间',price:400,status:'未入住'}
+	  ];
+
+	  function receive(){
+            var order=prompt('1入住,2退房,3查询现有房间状况');
+            switch(order){
+                case '1':{
+                    var _str='未入住房间有:';
+                    for(var x in room){
+                        if(room[x].status==='未入住'){
+                            _str+=room[x].name;
+                        }
+                    }
+                    _str+='输入房间号,确认入住房间';
+                    var _name=prompt(_str);
+                    var _roomnum=true;
+                    for(var x in room){
+                        if(room[x].name==_name){
+                            _roomnum=false;
+                            room[x].status='已入住';
+                        }
+                    }
+                    if(_roomnum){
+                        alert('该房间不存在');
+                    }else{
+                        alert(_name+'号房间入住成功');
+                    }
+					break;
+                }
+                
+				case '2' : {					
+					var _str ='您已入住房间是:';
+					var _a = prompt(_str);
+					for(var x in room){
+						if(room[x].name!=='未入住'){
+							_str+=room[x].name;
+						}
+					}
+					_str+='确认房间号无误后,请退房';
+					var _checkout=prompt(_str);
+                    var _roomnum=false;
+                    for(var x in room){
+                        if(room[x].name==_checkout){
+                            _roomnum=true;
+                            room[x].status='未入住';
+                        }
+                    }
+                    if(_roomnum){
+                        alert(_checkout+'号房间退房成功');
+                    }else{
+                        alert('该房间不存在');
+                    }
+					break;
+				}
+				case '3' : {
+					var _str ="";
+					for(var x in room){
+						_str+='房间号:'+room[x].name+'，';
+						_str+='房间类型:'+room[x].type+'，';
+						_str+='房间价格:'+room[x].price+'，';
+						_str+='房间状态:'+room[x].status+'\n';
+					}
+					alert(_str);
+				}
+				break;
+			  }
+			  if(order!=''){
+				receive();
+			  }
+	  }
+	  receive();
+  </script>
+ </head>
+
+ <body>
+  
+ </body>
+</html>

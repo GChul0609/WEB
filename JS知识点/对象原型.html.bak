@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> 对象原型 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script type="text/javascript">
+  var person = {
+	work:true,
+	job:'computer',
+	temper:'good',
+	classname:'1101A'
+  }
+  var boy = {
+	__proto__:person,
+	habit:'guita',
+    game:'LOL'
+  }
+  var girl = {
+	__proto__:person,
+	habit:'sing',
+    game:'Destroy the stars',
+	draw:function(){
+	   alert('good');
+	}
+  }
+  var flower = {
+    __proto__:girl,
+	age:18,
+	height:160,
+	habit:'Starchaser'    
+  }
+  var wanzhengkan = {
+	__proto__:boy,
+	age:20,
+	height:170
+  }
+  for(var x in flower){
+	  alert(x+':'+flower[x]);
+  }
+  
+  </script>
+ </head>
+
+ <body>
+  
+ </body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> 数组 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+     <script type="text/javascript">
+       /*
+		var arr = [1,2,3];
+		console.log(arr);
+        
+
+		var arr = [3,5,6,8,3,2,4];
+		    下标// 0 1 2 3 4 5 6
+		console.log(arr[0]);  //数组下标从0开始  读取3
+
+
+		var arr = [1,2,3];
+		var sum1 = arr[0]+arr[1]+arr[2];
+		console.log(sum1);
+
+
+		var sum2=0;
+		var arr = [1,2,3,4,5,6,7,8,9];
+		for(var i=0;i<9;i++){
+		    sum2 = sum2+arr[i];
+		}
+		console.log(sum2);  //循环数组
+
+
+        var sum3=0;
+		var arr = [1,2,3,4,5,6,7,8,9];
+		for(var i=0;i<arr.length;i++){    //arr.length 数组长度
+		    sum3 = sum3+arr[i];
+		}
+		console.log(sum3);   
+		
+
+		var arr = [1,2,3,4,5,6,7,8,9];
+        arr[arr.length-1] = 22;
+		console.log(arr);    //给数组元素赋值
+        
+		var arr = [1,2,3,4,5,6,7,8,9];
+        arr[arr.length-2] = 22;
+		console.log(arr);   */
+       
+
+
+		var arr2 = [6,9,4,9,0,4,6,3,0,0,6,6,5];
+        var sum1=0;
+		var sum2=0;
+	/*	for(var i=0;i<arr2.length-1;i=i+2){
+		    sum1 = sum1+arr2[i];
+		}
+		for(var i=1;i<arr2.length-1;i=i+2){
+		    sum2 = sum2+arr2[i];
+		}*/
+		for(var i=0;i<arr2.length-1;i++){
+		      if(i%2==0){
+			    sum1 = sum1+arr2[i];
+			  }else{
+			    sum2 = sum2+arr2[i];
+			  }
+		}
+		var sum3 = sum1+sum2*3;
+        var sum4 = sum3%10;
+		var code = (10-sum4)%10;
+		alert(code);
+		console.log(code);   //EAN13码    
+
+        
+        
+        var arr1 = [7,9,10,5,8,4,2,1,6,3,7,9,10,5,8,4,2];
+		var arr2 = [4,3,0,1,8,1,1,9,9,6,0,5,1,4,0,3,2,7];
+		var sum=0;
+		for(var i=0;i<arr1.length;i++){
+		      sum = sum+arr1[i]*arr2[i];
+		}
+		var index = sum%11;
+		var arr3 = [1,0,"x",9,8,7,6,5,4,3,2];
+		var code = arr3[index];
+		if(code==arr2[17]){
+		   console.log("正确");
+		}else{
+		   console.log("不正确");
+		}    //验证身份证号码      
+		 
+        //关联数组  for in遍历数组
+		var fbb=[];
+		fbb["姓名"]="范冰冰";
+		fbb["数学"]=90;
+        fbb["语文"]=80; 
+		fbb["英语"]=90;
+		//从第一个元素开始，将元素的key赋值给临时变量key
+		//arr[key]:当前正在遍历的元素的值(value)
+		for(var key in fbb){
+			document.write(key+":"+fbb[key]+"<br>");
+		}
+     </script>
+
+ </head>
+
+ <body>
+  
+ </body>
+</html>

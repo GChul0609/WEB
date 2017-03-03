@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> 函数原型 </title>
+  
+  <script type="text/javascript">
+  /*
+  function Student(name,sex){
+	this.name=name;
+	this.sex=sex===0?'女':'男';
+	this.class='1101A';
+	this.position='新长海中心';
+	this.say=function(){
+		alert('I am saying');
+	}
+  }
+
+  Student.prototype.sing=function(){
+	alert('sing good');
+  }
+  
+  var stu1 =new Student('胡荣花',0);
+  var stu2 =new Student('金希澈',1);
+  stu1.sing();//sing good
+  
+
+  Array.prototype.count=function(item){
+	var _count = 0;
+	for(var x in this){
+		if(this[x]===item){
+			_count++;
+		}
+	}
+	return _count;
+  }
+  var arr = [1,2,3,4,6,4,3,2,3];
+  alert(arr.count(3));//统计次数
+
+
+  Array.prototype.push=function(item){
+	  this[this.length]=item;
+	  console.log('我是被覆盖的push');
+  };
+  var arr = [1,2,3];
+  arr.push(9);
+  alert(arr);//1239
+
+  Object.prototype.say=function(){
+	alert('所有对象都会说话');
+  }
+  var a = {
+	name:'张三',
+	age:20,
+  }
+  a.say();//所有对象都会说话
+  arr.say();//所有对象都会说话
+
+  function Boystudent(){
+	  this.heigth=170;
+  }
+  Boystudent.prototype = new Student('',1);
+  var b = new Boystudent();
+
+  b.say();//I am sing  原型链
+  alert(b.heigth);//170
+  alert(b.position);
+*/
+  function Person(){
+	this.room='项目2';
+	this.classname='1101A';
+	this.work=true;
+  }
+  function Boy(){
+	this.badTemper=true;
+	this.computer=function(){
+		alert('computer good');
+	}
+  }
+  Boy.prototype=new Person();
+
+  function WanZhengKan(){
+	this.name='王正康';
+	this.heigth=175;
+  }
+  WanZhengKan.prototype=new Boy();
+  var wzk =new WanZhengKan();
+  alert(wzk.name);
+  console.log(wzk);
+  </script>
+ </head>
+
+ <body>
+  
+ </body>
+</html>

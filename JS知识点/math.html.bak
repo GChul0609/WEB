@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> Math </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script type="text/javascript">
+  /*
+  var a=1.732;
+  //alert(Math.ceil(a));
+  //alert(Math.floor(a));
+  //alert(Math.round(a));
+  for(i=0;i<100;i++){
+	var a = Math.floor(Math.random()*100);
+    if(a<60){
+		console.log('谢谢惠顾');
+	}else if(a<80){
+		console.log('再来一瓶');
+	}else if(a<98){
+		console.log('张家界三日游');
+	}else{
+		console.log('韩国双人豪华七日游');
+	}
+  }
+  */
+/*
+  var order=prompt('请输入你的指令:0代表拳头,1代表剪刀,2代表布');
+  var computer=Math.floor(Math.random()*3);
+   if(order==0){
+	computer=2;
+  }else if(order==1){
+	computer=0;
+  }else{
+	computer=1;
+  }
+  var description=['拳头','剪刀','布'];
+  console.log('我出:'+description[order]);
+  console.log('电脑出:'+description[computer]);
+  if(order==computer){
+	console.log('打平了,鬼知道我经历了什么');
+  }else if((order==0&&computer==1)||(order==1&&computer==2)||(order==2&&computer==0)){
+	console.log('厉害了word哥');
+  }else{
+	console.log('哎呦喂!你输了');
+  }
+*/
+/*  
+  var n=5000;
+  function tigerMachine(){
+	var order = prompt('你现在的分数'+ n +',请选择投注:0代表苹果,1代表西瓜,2代表双星,3代表双七,4代表大王');
+	var _arr = ['苹果','西瓜','双星','双七','大王'];
+	var score = prompt('你选择了投注'+_arr[order]+ n +',请输入投注的分数:');
+	while(score>n){
+		score=prompt('你的余额只有'+ n +',请输入正确的投注金额:');
+	}
+	var isTrue = Math.random()>0.7;
+	if(isTrue){
+		n += (parseInt(order) + 2) * parseInt(score);
+		console.log('恭喜你,中奖了,你现在的得分为'+ n);
+	}else{
+		n -= score;
+		console.log('不好意思,没有中奖,再接再厉哦');
+	}
+	if(n>0){
+		tigerMachine();
+	}else{
+		console.log('你的余额不足,请充值');
+	}
+  }
+  tigerMachine();
+  */
+
+  var n=5000;
+  function tigerMachine(){
+	var order = prompt('你现在的分数'+ n +',请选择投注:0代表苹果,1代表西瓜,2代表双星,3代表双七,4代表大王');
+	var _arr = ['苹果','西瓜','双星','双七','大王'];
+	var score = prompt('你选择了投注'+_arr[order]+ n +',请输入投注的分数:');
+	while(score>n){
+		score=prompt('你的余额只有'+ n +',请输入正确的投注金额:');
+	}
+	var a = Math.floor(Math.random()*100)
+	if(a<50){
+		n += (parseInt(order) + 2) * parseInt(score);
+		console.log('恭喜你,中了苹果,你现在的得分为'+ n);
+	}else if(a<75){
+	    n += (parseInt(order) + 2) * parseInt(score);
+		console.log('恭喜你,中了西瓜,你现在的得分为'+ n);
+	}else if(a<90){
+		n += (parseInt(order) + 2) * parseInt(score);
+		console.log('恭喜你,中了双星,你现在的得分为'+ n);
+	}else if(a<100){
+		n += (parseInt(order) + 2) * parseInt(score);
+		console.log('恭喜你,中了双七,你现在的得分为'+ n);
+	}else{
+		n -= score;
+		console.log('不好意思,没有中奖,再接再厉哦');
+	}
+	if(n>0){
+		tigerMachine();
+	}else{
+		console.log('你的余额不足,请充值');
+	}
+  }
+  tigerMachine();
+  </script>
+ </head>
+
+ <body>
+  
+ </body>
+</html>

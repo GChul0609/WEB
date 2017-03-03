@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> 数据类型 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+    <script type="text/javascript">
+	  /*
+	  var a;
+	  alert(a); //undefine
+	 
+	  var a=null;
+	  alert(a);  //null
+
+	  var a = 1;
+	  alert(a);   //1 number数字
+       
+      var a = "1";
+	  var b = 1+a;
+      alert(b);  //11
+	  var c = 1+2+a;
+	  alert(c);  //31
+      
+	  var a = true;
+	  alert(a);  //boolean
+      */
+	 
+	   function M(person){
+	      if(person.bishi===true){
+		      if(person.mianshi===true){
+			     if(person.fushi===true){
+					 
+				 }
+			  }
+		  }
+		  return ('通过');
+	  }
+	      
+    
+	  /*
+	  var person={
+	      age:20,
+		  height:180,
+		  weidth:65,
+		  say:function(){
+		     alert("saying");
+			 return 1;
+		  },
+		  jump:function(){
+		     alert("I jump");
+		  },
+		  play:function(){
+		     //return 2;
+		  }
+	  };
+	  
+	  alert(person.age);  //20
+      alert(person.say());//先弹出person.say()的值saying，
+	                      //再弹出 alert(person.say())的值:有return:1; 无：undefined
+	  alert(person.jump());//先弹出I jump，再弹出undefined
+      alert(person.play());//没有return undefined; 如果有return返回return值
+	  //相当于var a = person.play();
+	  //alert(a);
+	  
+	  alert(person.sex);  //放在中间undefined
+
+	  person.sex="女";
+	  person.sing=function(){
+	       alert("sing");
+	  }
+	  //alert(person.sex);
+	  //alert(person.sing());
+      */
+     //console.log(person);
+
+	 var emalis=[];
+	 var input=prompt("输入邮箱");
+	 emails.push(input.toLowerCase());
+	 input=prompt("输入第二个邮箱");
+	 var i;
+	 for(i=0;i<emails.length;i++){
+		if(input.toLowerCase()==emails[i].toLowerCase()){
+			alert("已被使用");
+			break;
+		}
+	 }
+	 if(i==emails.length){
+		emails.push(input.toLowerCase());
+		alert("注册成功");
+	 }
+    </script>
+ </head>
+
+ <body>
+  
+ </body>
+</html>

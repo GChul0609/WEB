@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> 二维数组 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+     <script type="text/javascript">
+	   /*
+	   //定义三行三列的二维数组
+	   var arr = [
+	                [1,2,3,66],
+					[4,5,6],
+					[7,8,9]
+	   ]
+	   //给数组元素赋值
+	   arr[0][0]=99;
+	   console.log(arr[0][0]);
+
+       //读取数组元素  6
+	   var a = arr[1][2];
+	   console.log(a);
+
+       //输出二维数组的长度
+	   var len = arr.length;
+	   console.log(len);
+
+	   //输出元素的长度
+	   var len1 = arr[0].length;
+	   console.log(len1);
+
+       //循环输出二维数组  i行  j列
+	   for(var i=0;i<arr.length;i++){
+	       for(var j=0;j<arr[i].length;j++){
+		       console.log(arr[i][j]);
+		   }
+	   }
+	   
+	   //接受字符串
+	   var str = prompt("请输入数字");
+	   //字符串转化成数字
+       var num = parseInt(str);
+
+	   var num1 = num%10;
+	   var num2 = (num-num%10)/10%10;
+	   var num3 = (num-num%100)/100%10;
+	   var num4 = (num-num%1000)/1000%10;
+	   var num5 = (num-num%10000)/10000%10;
+	   var arr = [num5,num4,num3,num2,num1];
+	   //存储输入的数字及相应的次数
+	   var arr2 = [];
+	   //循环拿出5个数  i表示万--个位  j表示输入的数
+	   for(var i=0;i<arr.length;i++){
+	       var flag = true;   //定义标志位 数字第一次出现 
+		   if(arr2.length==0){
+			   //二维数组第一次存储数据
+               arr2[0] = [arr[i],1];  //num5放入arr2[0]  1 出现1次 		   
+		   }else{
+		          //循环比较二维数组
+			      for(var j=0;j<arr2.length;j++){
+			         //比较数字
+				     if(arr[i]==arr2[j][0]){     //[j][0]表示[j]这个数字
+				          arr2[j][1] = arr2[j][1]+1;  //次数增加1   [j][1]表示j出现1次
+						  flag = false;
+						  break;
+				    }
+			      }
+			      if(flag){
+				     //第一次出现的数字
+			         arr2[arr2.length] = [arr[i],1];
+			   }
+		   }
+	   }
+       console.log(arr2);
+        */
+       var str = prompt("请输入数字：");
+       var j = parseInt(str);
+	   var arr=[];
+       for(var i=2;i<j;i++){
+		   var flag = true;
+		   if(j%i==0){	
+				   flag=false;     
+				   break;
+		   }		   
+       }
+	   if(flag){
+		  arr[i]=j;
+	      console.log("素数："+arr[i]);
+	   }else{
+	      document.write(j+":不是素数");
+	   }
+      
+	   /*
+	   for(var i=2;i<=100;i++){
+		   var flag=true;
+	       for(var j=2;j<i;j++){
+		      if(i%j==0){
+				 flag=false;
+				 break;
+			  }
+		   }
+		   if(flag){
+	           document.write(i+"\t");
+	      }
+	   }
+	   */
+     </script>
+ </head>
+
+ <body>
+    
+ </body>
+</html>

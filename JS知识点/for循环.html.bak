@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> JS--for循环 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+
+     <script type="text/javascript">
+     /*
+	  for(var i=0;i<=10;i=i+1){
+	                  alert(i);
+					  console.log(i); //在控制台输出结果
+				   }
+
+       var sum = 0;
+	   for(var i=1;i<=100;i=i+1){
+	         sum = sum + i;
+			}
+       console.log(sum); //打印输出在控制台  
+
+       var sum = 0;
+	   for(var i=0;i<=100;i=i+2){
+	           sum = sum + i;
+			   }
+	   console.log(sum);  //偶数之和
+
+	   var sum = 0;
+	   for(var i=1;i<=100;i=i+2){
+	            sum = sum + i;}
+	   console.log(sum);   //奇数之和  
+       
+       var sum1 = 0;
+       var sum2 = 0;
+	   for(var i=1;i<=100;i=i+1){
+	       //能被2整除的是偶数
+		   if(i%2==0){
+		        sum2 = sum2 + i;
+			   }else{
+			       sum1 = sum1 + i;
+				  }
+		   }
+       console.log("奇数之和："+sum1); 
+	   console.log("偶数之和："+sum2); //1-100偶数、奇数之和
+
+       var n=1;
+	   var sum=0;
+	   for(var i=0;i<10;i=i+1){
+	       sum = sum + 2*n;
+		   n = n*3;
+	   }
+	   console.log(sum);  //首项为2，公比为3，求前十项的和  
+
+       //输出一行
+	   for(var i=1;i<=9;i=i+1){
+	       //输出这一行的列，每行空格
+		   for(var j=1;j<=i;j=j+1){
+		            document.write(j+"*"+i+"="+i*j+"\t");
+			      }
+				  document.write("<br\>");
+		   }  //乘法表   
+	   */ 
+	   var arr = [1,2,3,4,5];
+	   var sum = 0;
+	   for(var i=0;i<arr.length;i++){
+	       sum+=arr[i];
+	   }
+	   alert(sum);
+
+	   var arr2 = [1,2,3,4,5];
+	   var sum1 = 0;
+	   for(var X in arr2){
+	       sum1+=arr2[X];
+	   }
+	   alert(sum1);
+
+	   var a = {
+	      name:'Anna',
+		  age:18,
+		  sex:'女'
+	   }
+	   for(var x in a){
+	      alert(x+':'+a[x]);
+	   }
+	</script>
+ </head>
+
+ <body>
+  
+ </body>
+</html>

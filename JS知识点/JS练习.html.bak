@@ -1,0 +1,177 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> JS练习 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+     <script type="text/javascript">
+         /*
+         var a=prompt("请输入数字");
+		 var num=a;
+         if(num=="1"){
+		    alert("壹");
+		 }else if(num=="2"){
+		    alert("贰");
+		 }else if(num=="3"){
+		    alert("叁");
+		 }else if(num=="4"){
+		    alert("肆");
+		 }else if(num=="5"){
+		    alert("伍");
+		 }else if(num=="6"){
+		    alert("陆");
+		 }else if(num=="7"){
+		    alert("柒");
+		 }else if(num=="8"){
+		    alert("捌");
+		 }else if(num=="9"){
+		    alert("玖");
+		 }else if(num=="0"){
+		    alert("零");
+		 }else{
+		    alert("输入有误，请重新输入");
+		 }    
+         
+		 var a=prompt("请输入数字");
+		 var num=a;
+         switch(a){
+		     case"1":alert("壹");
+			         break;
+			 case"2":alert("贰");
+			         break;
+			 case"3":alert("叁");
+			         break;
+			 case"4":alert("肆");
+			         break;
+			 case"5":alert("伍");
+			         break;
+			 case"6":alert("陆");
+			         break;
+			 case"7":alert("柒");
+			         break;
+			 case"8":alert("捌");
+			         break;
+			 case"9":alert("玖");
+			         break;
+			 case"0":alert("零");
+			         break;
+		     default:prompt("输入有误，请重新输入");
+		 }
+         */
+
+
+
+         /*
+         var str=prompt("请输入数字");
+		 var num=parseInt(str);   //字符串转化成数字
+		 var ge = num%10;
+		 var shi = (num-num%10)/10%10;
+         var bai = (num-num%100)/100%10;
+		 var qian = (num-num%1000)/1000%10;
+	     var wan = (num-num%10000)/10000%10;
+
+		 var arr = ["零","壹","贰","叁","肆","伍","陆","柒","捌","玖"];  
+         var arr1 = [0,1,2,3,4,5,6,7,8,9];
+         
+         var ge1 = arr[ge];
+		 var shi1 = arr[shi];
+		 var bai1 = arr[bai];
+	   	 var qian1 = arr[qian];		 
+		 var wan1 = arr[wan];
+
+         if(wan==0){
+		    document.write(qian1+"仟"+bai1+"佰"+shi1+"拾"+ge1);
+		 }else{
+		    if(qian==0){
+			 document.write(bai1+"佰"+shi1+"拾"+ge1);
+			}else{
+			   if(bai==0){
+			    document.write(shi1+"拾"+ge1);
+			   }else{
+			      if(shi==0){
+				    document.write(ge1);
+				  }
+			   }
+			}
+		 } 
+       */
+         /*
+         if(wan=="零"){
+		      wan1=="";
+		 }else{
+		      wan1
+		 }
+         */
+
+
+
+		 /*
+         var str=prompt("请输入税前工资");
+		 var num=parseInt(str); 
+		 if(num>3500&&num<=5000){
+				 tax = (num-3500)*0.03;
+			}else if(num<=9000){
+			     tax = 45+(num-4000)*0.1;
+			}else{
+			     tax = 445+(num-9000)*0.2;
+			}
+		    
+		 alert("你的税后工资为:"+(num-tax));  //工资超额累进税率
+		 */  
+        
+
+	  
+       document.write("1.中国的首都是?<br>");
+	   document.write("A.北京 B.上海 C.广州 D.深圳");
+	   var answer1 = prompt("请输入你的答案：");
+	  
+       document.write("<br>2.湖南的省会是?<br>");
+	   document.write("A.益阳 B.长沙 C.成都 D.武汉");
+	   var answer2 = prompt("请输入你的答案：");
+       
+	   document.write("<br>3.属于中国的城市是?<br>");
+	   document.write("A.巴黎 B.伦敦 C.成都 D.莫斯科");
+	   var answer3 = prompt("请输入你的答案：");
+      
+
+	   document.write("<br>4.长沙小吃?<br>");
+	   document.write("A.口味虾 B.肉夹馍 C.兰州拉面 D.擂茶");
+	   var answer4 = prompt("请输入你的答案：");
+       
+
+	   document.write("<br>5.长沙景点?<br>");
+	   document.write("A.衡山 B.茶马古道 C.富士山 D.岳麓山");
+	   var answer5 = prompt("请输入你的答案：");
+      
+       var arr = ["A","B","C","A","D"];
+	   var arr2 = [answer1,answer2,answer3,answer4,answer5];
+	   var scole=0; 
+	   for(var i=0;i<arr.length;i++){
+			if(arr2[i]==arr[i]){
+			        scole = scole+2;
+			   }    
+		}
+	    alert("你的成绩:"+scole);   //在线考试系统
+
+        /*
+        var arr = ["中国的首都是?<br>A.北京 B.上海 C.广州 D.深圳<br>",
+		           "湖南的省会是?<br>A.益阳 B.长沙 C.成都 D.武汉<br>",
+				   "属于中国的城市是?<br>A.巴黎 B.伦敦 C.成都 D.莫斯科<br>",
+				   "长沙小吃?<br>A.口味虾 B.肉夹馍 C.兰州拉面 D.擂茶<br>",
+				   "长沙景点?<br>A.衡山 B.茶马古道 C.富士山 D.岳麓山<br>",
+				   "谁最帅?<br>A.张继科 B.韩庚 C.金在中 D.鹿晗<br>",
+				   "谁最妖孽?<br>A.李准基 B.金希澈 C.金在中 D.李弘基<br>",
+				   "谁最美?<br>A.刘亦菲 B.范冰冰 C.宋慧乔 D.朴信惠<br>",
+				   "金希澈最喜欢什么?<br>A.拉面 B.韩庚 C.海底捞 D.北京炒饭<br>",
+				   "希澈和在中谁美?<br>A.金希澈 B.我最美 C.金在中 D.我选择狗带<br>"]
+		*/
+
+     </script>
+ </head>
+
+ <body>
+  
+ </body>
+</html>

@@ -1,0 +1,44 @@
+//封装
+Date.prototype.toDateString=function(){
+	var _str='';
+	_str+=this.getFullYear();
+	_str+='-';
+	var _m=this.getMonth()+1;
+	_str+=_m>9?_m:'0'+_m;
+	_str+='-';
+	var _d=this.getDate();
+	_str+=_d>9?_d:'0'+_d;
+    _str+=' ';
+
+	return _str;
+  };
+  Date.prototype.toTimeString=function(){
+	var _str='';
+	var _h=this.getHours();
+	_str+=_h>9?_h:'0'+_h;
+	_str+=':';
+	var _mi=this.getMinutes();
+	_str+=_mi>9?_mi:'0'+_mi;
+	_str+=':';
+	var _s=this.getSeconds();
+	_str+=_s>9?_s:'0'+_s;
+	_str+=' ';
+
+	return _str;
+   };
+
+   Date.prototype.toWeekString=function(){
+	var _str='';
+    var _weekStr=['星期天','星期一','星期二','星期三','星期四','星期五','星期六'];
+	_str+=_weekStr[this.getDay()];
+
+	return _str;
+  }
+
+  Date.prototype.toChinaString=function(){
+	return this.toDateString()+' '+this.toTimeString();
+  }
+
+  Date.prototype.toChinaFullString=function(){
+    return this.toDateString()+' '+this.toTimeString()+' '+this.toWeekString();
+  }

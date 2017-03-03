@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> 隐式类型转化 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script type="text/javascript">
+  /*
+     var a="2";
+	 var b=1+a;
+	 alert(b);  //数字+字符串 转字符串  12
+  
+	 var a="2";
+	 var b=2-a;
+	 alert(b);  //0  数字-字符串 转数字
+
+	 var b=1-"a";
+     alert(b);  //NaN
+
+     var b=1-"14";
+     alert(b);  //-13
+
+	 var a=true;
+	 var b=1+a;
+	 alert(b); //2  数字+boolean  转数字 true=1，
+
+	 var a=false;
+	 var b=1-a;
+	 alert(b);  //1  数字+boolean   false=0
+*/
+
+/*
+    var a={
+	       b:1,
+		   c:0,
+		   d:null,
+		   e:"2",
+           f:"",
+		   g:{}
+
+	};
+	
+	if(a.b){
+	    alert("true");
+	}else{
+	    alert("false");
+	}  //true  其他数字为true
+
+    if(a.c){
+	    alert("true");
+	}else{
+	    alert("false");
+	}  //false  0代表false 
+   
+    if(a.d){
+	    alert("true");
+	}else{
+	    alert("false");
+	}   //false  null转成false
+	
+	if(a.e){
+	    alert("true");
+	}else{
+	    alert("false");
+	}  //true  字符串除了"",其他为true
+
+	if(a.f){
+	    alert("true");
+	}else{
+	    alert("false");
+	} //false  ""空字符串转false
+	
+	if(a.g){
+	    alert("true");
+	}else{
+	    alert("false");
+	}  //true  object转true
+    
+	if(a.v){
+	    alert("true");
+	}else{
+	    alert("false");
+	} //false  undefined转fals
+ 
+	
+	var a;
+    if(a){
+	    alert("true");
+	}else{
+	    alert("false");
+	}  //false 
+	*/
+
+	var a=1;
+	var b="a";
+	var c="";
+	var d=true;
+	var e=false;
+	var f;
+	var g=null;
+	var h={};
+	/*
+	alert(a&&b);//a
+	alert(a&&c);//""  相当于false
+	alert(a&&d);//true  a&&e false
+	alert(a&&f);//undefine  相当于false
+	alert(a&&g);//null  相当于false
+	
+	alert(b&&a);//1
+	alert(b&&c);//""
+	alert(b&&d);//true  a&&e false
+	alert(b&&h);//object相当于true
+	*/
+	alert(d&&e);//false
+    alert(d&&b||e);//a
+	alert(a||c);//1
+	alert(b&&a||e&&h);//1
+  </script>
+ </head>
+
+ <body>
+  
+ </body>
+</html>

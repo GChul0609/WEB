@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> 函数function </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script type="text/javascript">
+	function a(n,name){
+		alert(n);
+		alert('我的名字是:'+name);
+		console.log('运行到这里,bye');
+	}
+	a(1,'flower');//类型function
+
+	var a='function a(){}';
+	alert(typeof a);//类型string
+
+    //2种方法只要类型不一样
+
+
+    //匿名函数 先定义后使用
+	//b();  会出错，b is not a function
+	var b=function(){
+		alert('我是b');
+	}
+	b();  //我是b 
+
+
+	//有名函数优先编译，可放在任何位置定义
+	c();
+	function c(){
+		alert(1);
+	}
+	//c();   写前面后面都可以运行
+
+
+	function d(n,sex){
+		alert(n);
+		alert('sex'+sex);
+	}
+	d(1,'女',flower);// 多的这个参数flower不会影响function运行，显示undefined
+	d(1);//少一个参数也会运行，sex显示undefined
+
+
+	var n=setInterval(function(){
+        var _temp=$('#ZE_4f000G154801').text();
+        if(_temp==='有'){
+            var mp3='https://ss0.bdstatic.com/y0s1hSulBw92lNKgpU_Z2jR7b2w6buu/data2/music/158450f268c9c9b0ab89309f457a6edf/41499168/41499168.mp3?xcode=1a47751db7af47c42b8f63f9ac723f36';
+            $('body').append('<audio id="bgMusic" src="'+mp3+'" autoplay="autoplay"></audio>');
+            clearInterval(n);
+        }else{
+            console.log('暂时没票，继续刷新');
+            $('#query_ticket').click();
+        }
+    },3000);
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

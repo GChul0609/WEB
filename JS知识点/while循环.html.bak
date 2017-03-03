@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> while循环 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+
+      <script type="text/javascript">
+	  /*  //死循环、无限循环
+	  while(true){
+	         if(i==3){
+				   break;  //跳出循环
+			 }
+		}  */    
+
+      
+	  var i=1;
+      while(i<=10){
+			 document.write(i+"\t");
+			 i++; 
+		  }      //输出1-10  
+
+	 var i=1;
+	 while(i<=100){
+	      if(i%3==0){
+		     document.write(i+"\t");	  		  
+		  }
+		  i++;
+	 }    //输出1-100之间3的倍数 
+
+
+      //do...while先执行一次，后判断。
+	  var i=1;
+	  do{
+	      document.write(i);
+		  i++;
+		 }wihle(i>3);     //执行一次
+
+  
+	 //while先判断、后执行
+	  var i=1;
+	  wihle(i>3){
+	      document.write(i);
+		  i++;
+		 }      //不执行
+      
+	  var num=6949046300665;
+	  var num1 = (num-num%10)/10;  //12位数（把5拿掉） 得到个位数6  
+	  var sum1 = 0;
+	  var sum2 = 0;
+	  for(var i=1;i<1000000000000;i=i*100){
+	        var c2= (num1-num1%i)/i%10;
+			sum2 = sum2+c2;   //偶数项的和
+		    
+	  } 
+	  /*
+	  while(i<1000000000000){
+	     var c = (num1-num1%i)/i%10;
+         sum2 = sum2+c2;
+		 i=i*100;
+	  }  */
+	  for(var i=10;i<10000000000000;i=i*100){
+	        var c1 = (num1-num1%i)/i%10;
+            sum1 = sum1+c1;   //奇数项的和
+			
+	  }
+      var sum3 = sum1+sum2*3;   //奇数项的和+偶数项的和*3
+	  var sum4 = sum3%10;       //个位数取余
+	  var code = (10-sum4)%10;  //(10-个位数)%10
+	  alert(code);   //EAN13码(条形码)校验
+	  </script>
+ </head>
+
+ <body>
+  
+ </body>
+</html>

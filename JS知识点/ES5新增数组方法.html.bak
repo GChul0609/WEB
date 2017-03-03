@@ -1,0 +1,144 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> ES5新增数组方法 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script type="text/javascript">
+  /*
+  var arr = ['a','b','a','c','d','e'];
+  //alert(arr.indexOf('a'));  //返回数组下标，无则返回-1.  有相同的元素返回第一个的 
+  
+  arr.myIndexOf=function(item){
+	for(var i=0;i<this.length;i++){
+		if(this[i]===item){
+			return i;
+		}
+	}
+	return -1;
+  }
+  //alert(arr.myIndexOf('a'));
+
+  arr.forEach(function(item,index,ar){
+	//alert(ar);  //参数:元素、下标、数组本身
+  });
+
+  arr.myForEach=function(fun){  //回调函数,将函数作为参数调用
+	  for(var i=0;i<this.length;i++){
+		fun(this[i],i,this);    //调用才运行
+	  }
+  }
+  arr.myForEach(function(item,index,ar){
+	//alert(ar);
+  });
+  */
+  /*
+  var arr = ['小张','小王','小李','小刘'];
+  var arr2 = arr.map(function(item,index,ar){
+	if(item=='小刘') {
+		return '女';
+	}else{
+		return '男';
+	}
+  })
+  //alert(arr2);
+
+  var arr = ['小张','小王','小李','小刘'];
+  arr.myMap=function(fun){
+	   var _arr = []; 
+	for(var i=0;i<this.length;i++){
+		//元素
+		_arr.push(fun(this[i],i,this));		
+	}
+	return _arr;
+  }
+    
+  var arr3 = arr.myMap(function(item,index,ar){
+	if(item=='小刘') {
+		return '女';
+	}else{
+		return '男';
+	}
+  })
+  //alert(arr3);
+
+  Array.prototype.myFilter=function(fun){
+	var _arr = [];
+	for(var i=0;i<this.length;i++){
+		//true  false
+		if(fun(this[i],i,this)){
+			_arr.push(this[i]); 
+		}  
+	}
+	return _arr;
+  }
+ 
+  var arr=[1,2,3,4,5];
+  var arr2=arr.myFilter(function(item,index,ar){
+	return item>3;
+	//return true;  返回原数组,过滤不起作用 
+  });
+  alert(arr2); //4,5
+*/
+  //some 只要有一个元素符合function规则，则返回true
+  Array.prototype.mySome=function(fun){
+		for(var i=0;i<this.length;i++){
+			if(fun(this[i],i,this)){
+				return true;
+			}
+		}
+		return false;
+   }
+  
+  alert(arr.mySome(function(item,index,arr){
+		//return item>3;  true
+		//return item===5;  true
+		return item===9;  //false
+  }));
+  
+  //every 只要有一个元素不符合function规则，则返回false
+   Array.prototype.myEvery=function(fun){
+		for(var i=0;i<this.length;i++){
+			if(!fun(this[i],i,this)){
+				return false;
+			}
+		}
+		return true;
+   }
+   alert(arr.every(function(item,index,arr){
+	   return item>6;
+   }));
+
+  //reduce
+  Array.prototype.myReduce=function(fun){
+	    var _sum = 0;
+		for(var i=0;i<this.length;i++){
+			_sum = fun(_sum,this[i]);			
+		}
+		return _sum;
+  } 
+  var arr = [1,2,3,4,5];
+  
+  var arr2 = arr.myReduce(function(a,b){
+		return a+b;
+  });
+  alert(arr2);
+
+  var arr3 = [
+		{name:'aa',age:10},
+		{name:'bb',age:8},
+		{name:'cc',age:12}
+  ]
+  var arr4 = arr3.myReduce(function(a,b){
+		return a+b.age;
+  },0);//a的初始值为0
+ alert(arr4);
+  </script>
+ </head>
+
+ <body>
+  
+ </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> 冒泡排序 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+
+    <script type="text/javascript">
+	     var arr = [3,2,5,4,22,66,13];
+		 console.log(arr);
+		 //循环 每次确定一个最大
+		 for(var j=0;j<arr.length-1;j++){
+		    for(var i=0;i<arr.length-1;i++){  //循环获得相邻的两个数
+			    if(arr[i]>arr[i+1]){
+				   var temp = arr[i];    //交换位置，建一个临时的变量装arr[i]
+				   arr[i] = arr[i+1];      
+				   arr[i+1] = temp;
+				}
+			}
+		 }    //冒泡排序：拿相邻2个数进行比较，把大的数放在后面；执行完成一轮以后，能够选出最大的放在最后。
+		 console.log(arr);
+	</script>
+ </head>
+
+ <body>
+  
+ </body>
+</html>

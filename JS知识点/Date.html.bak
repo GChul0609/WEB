@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <title> date日期 </title>
+  <meta name="Generator" content="EditPlus">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <script type="text/javascript" src="Date.js"></script>  <!--调用js要单独写一个-->
+  <script type="text/javascript">
+
+  var now = new Date();
+  alert(now.toChinaString());
+  alert(now.toChinaFullString());
+  alert('2016-09-08 09:08:09');
+
+  
+  </script>
+ </head>
+
+ <body>
+  
+ </body>
+</html>
