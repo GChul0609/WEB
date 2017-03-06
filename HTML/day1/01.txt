@@ -1,0 +1,74 @@
+web:
+    1、与Internet关系
+   Internet-互联网 （是广域网） 给web提供硬件上的支持；互联网提供很多服务：ftp、SMTP、http
+   IP地址唯一，外网IP有限
+    2、web
+   又叫万维网（world wide web，www）是目前应用最广泛，提供资源和服务最多的，最大的互联网。   
+不是唯一的，万维网只是互联网的一种。
+   服务器运行在万维网，用户通过浏览器访问万维网
+    3、常用浏览器
+   软件：IE、Firefox（火狐）、chrome（谷歌）、opera（苹果）、safire
+    4、历史
+   万维网与浏览器：90年代创建，欧洲粒子物理研究所
+   TimBerners-Lee 互联网之父 （第一个浏览器，创建万维网）
+   
+
+web（HTML、CSS、js）：
+    1、HTML（hypertext markup language，超文本标记语言）
+   超文本：文本中含有相互连接的元素
+   标记语言：通过标记表达传递信息   （服务器和浏览器）
+       <关键字> 标签体 </关键字>  -开始、结束标记
+   标记可以合理嵌套，标签书写要规范
+   如:<html><head></head></html>
+   标签中含有属性：用来设置标签的特性
+       属性名称="属性值"
+
+第一个HTML文本：
+   文本文档，后缀名：.html/.htm 
+根标签有且仅有一对，根标签下有两个子标签：<head>--书写文档的相关设置 
+                                          <body>--书写显示内容
+ 如： 
+<html>
+<head>
+<title>第一个网页，电商，男装，鞋帽（关键字）</title>
+  <!--
+  <style type="text/css">
+       boby{background-color:red}
+  </style>
+  <script type="text/javascript">
+      alter(123);--弹出提示框
+  </script>
+   -->
+   <meta charset="GB2312"></meta>    charset：字符集
+   <!-- 设置页面自动刷新，跳转 -->
+   <meta http-equiv="refresh" 
+    content="2;http：//www.baidu.com"></meta>  2秒刷新一次跳转到百度
+</head>
+<body>
+     hello html
+     你好，中国
+</body>
+</html>
+常用标签：
+title：标题，还可以定义关键字
+style：书写CSS样式  属性 type ="text/css"
+script: 书写JavaScript  属性 type ="text/JavaScript" 
+注释：被浏览器忽略的，不被解析的内容   <!-- 注释内容  -->
+
+meta: 元标签  设置当前网页的基本信息
+
+支持中文的编码方式：UTF-8  一个汉字解析成3个字节
+                    GB2312 一个汉字解析成2个字节  国标
+
+
+
+
+
+
+
+
+
+
+
+
+
